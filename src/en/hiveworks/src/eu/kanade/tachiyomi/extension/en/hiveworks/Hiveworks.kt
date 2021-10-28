@@ -202,8 +202,6 @@ class Hiveworks : ParsedHttpSource() {
         val url = response.request.url.toString()
         when {
             "witchycomic" in url -> return witchyChapterListParse(response)
-        }
-        when {
             "sssscomic" in url -> return ssssChapterListParse(response)
         }
         val document = response.asJsoup()
